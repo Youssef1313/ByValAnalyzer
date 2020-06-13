@@ -1,5 +1,4 @@
-﻿Imports Analyzer2
-Imports Analyzer2.Test.TestHelper
+﻿Imports Analyzer2.Test.TestHelper
 Imports Microsoft.CodeAnalysis
 Imports Microsoft.CodeAnalysis.CodeFixes
 Imports Microsoft.CodeAnalysis.Diagnostics
@@ -10,16 +9,9 @@ Namespace Analyzer2.Test
     Public Class UnitTest
         Inherits CodeFixVerifier
 
-        'No diagnostics expected to show up
-        <TestMethod>
-        Public Sub TestMethod1()
-            Dim test = ""
-            VerifyBasicDiagnostic(test)
-        End Sub
-
         'Diagnostic And CodeFix both triggered And checked for
         <TestMethod>
-        Public Sub TestMethod2()
+        Public Sub TestRemoveByVal()
 
             Dim test = "
 Module Module1
